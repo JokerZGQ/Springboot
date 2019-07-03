@@ -1,5 +1,7 @@
 package com.zhaoguoqing.aaa;
 
+import com.sun.javafx.sg.prism.NGShape;
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +21,10 @@ public class Hello {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Hello.class, args);
+        //SpringApplication.run(Hello.class, args);
+        SpringApplication springApplication = new SpringApplication(Hello.class);
+        springApplication.setBannerMode(Banner.Mode.OFF);
+        springApplication.run();
     }
 
 }
